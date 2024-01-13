@@ -4,7 +4,8 @@ public class CeillingOfANumber {
         int[] arr = {2, 5, 7, 8, 9, 11, 16, 18, 19, 21, 27};
         int target = 17;
         int ans = ceiling(arr, target);
-        System.out.println(ans);
+        System.out.println("Found at position: " + ans);
+        System.out.println("Ceiling: " + arr[ans]);
     }
 
     static int ceiling(int[] arr, int target) {
