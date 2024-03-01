@@ -12,8 +12,11 @@ public class CeillingOfANumber {
         int start = 0;
         int end = arr.length - 1;
         boolean is_OA = arr[start] < arr[end];
+        if ((is_OA && target > arr[arr.length - 1]) || (!is_OA && target > arr[0])) {
+            return -1;
+        }
 
-        while (start < end) {
+        while (start <= end) {
             int mid = start + (end - start) / 2;
             if (arr[mid] == target) {
                 return mid;
