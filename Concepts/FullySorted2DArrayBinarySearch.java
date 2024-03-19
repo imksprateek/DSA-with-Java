@@ -17,7 +17,10 @@ public class FullySorted2DArrayBinarySearch {
         int cols = matrix[0].length;
 
         if (rows == 1) {
-            return BinarySearch(matrix, 0, 0, cols - 1, target);
+            return SearchRow(matrix, 0, 0, cols - 1, target);
+        }
+        if (cols == 1) {
+            return searchCol(matrix, 0, 0, rows - 1, target);
         }
 
         int rStart = 0;
@@ -41,21 +44,21 @@ public class FullySorted2DArrayBinarySearch {
         if (matrix[rStart + 1][cMid] == target) {
             return new int[]{rStart + 1, cMid};
         }
-        if (target <= matrix[rStart][cMid - 1]) {
-            return BinarySearch(matrix, rStart, 0, cMid - 1, target);
+        if (target < matrix[rStart][cMid]) {
+            return SearchRow(matrix, rStart, 0, cMid - 1, target);
         }
         if (target >= matrix[rStart][cMid + 1] && target <= matrix[rStart][cols - 1]) {
-            return BinarySearch(matrix, rStart, cMid + 1, cols - 1, target);
+            return SearchRow(matrix, rStart, cMid + 1, cols - 1, target);
         }
-        if (target <= matrix[rStart + 1][cMid - 1]) {
-            return BinarySearch(matrix, rStart + 1, 0, cMid - 1, target);
+        if (target < matrix[rStart + 1][cMid]) {
+            return SearchRow(matrix, rStart + 1, 0, cMid - 1, target);
         } else {
-            return BinarySearch(matrix, rStart + 1, cMid + 1, cols - 1, target);
+            return SearchRow(matrix, rStart + 1, cMid + 1, cols - 1, target);
         }
 
     }
 
-    public static int[] BinarySearch(int[][] matrix, int row, int colStart, int colEnd, int target) {
+    public static int[] SearchRow(int[][] matrix, int row, int colStart, int colEnd, int target) {
         while (colStart <= colEnd) {
             int mid = colStart + (colEnd - colStart) / 2;
             if (matrix[row][mid] == target) {
@@ -66,6 +69,21 @@ public class FullySorted2DArrayBinarySearch {
             }
             if (target < matrix[row][mid]) {
                 colEnd = mid - 1;
+            }
+        }
+        return new int[]{-1, -1};
+    }
+
+    public static int[] searchCol(int[][] matrix, int col, int rowStart, int rowEnd, int target) {
+        while (rowStart <= rowEnd) {
+            int mid = rowStart + (rowEnd - rowStart) / 2;
+            if (target == matrix[mid][col]) {
+                return new int[]{mid, col};
+            }
+            if (target > matrix[mid][col]) {
+                rowStart = mid + 1;
+            } else {
+                rowEnd = mid - 1;
             }
         }
         return new int[]{-1, -1};
