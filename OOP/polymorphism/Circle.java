@@ -9,4 +9,8 @@ public class Circle extends Shapes {
     void area() {
         System.out.println("Area is pi*r^2");
     }
+
+    static void greeting() {
+        System.out.println("Greeting from Circle!");
+    }
 }

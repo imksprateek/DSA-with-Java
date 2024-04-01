@@ -34,5 +34,15 @@ public class Main {
 
         Shapes sq = new Square();
         sq.area();
+
+        //static method cannot be  overriden
+        Shapes circle_static = new Circle();
+        circle_static.greeting();
+        Circle.greeting();
+
+        Shapes triangle = new Triangle();
+        Triangle.greeting(); //You can inherit but you cannot override
+
+        //Overriding and overloading does not apply to instance variables. They apply only to non-static methods
     }
 }
