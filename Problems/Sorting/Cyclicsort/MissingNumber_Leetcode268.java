@@ -1,4 +1,4 @@
-package Problems.Sorting;
+package Problems.Sorting.Cyclicsort;
 
 public class MissingNumber_Leetcode268 {
     public static void main(String[] args) {
