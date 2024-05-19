@@ -44,7 +44,7 @@ Understanding data structures and algorithms is essential for every programmer, 
 
 ## Algorithms
 
-1. **Sorting Algorithms**: Various sorting algorithms like bubble sort, selection sort, merge sort, quicksort, etc.
+1. **Problems.Sorting Algorithms**: Various sorting algorithms like bubble sort, selection sort, merge sort, quicksort, etc.
 2. **Searching Algorithms**: Binary search, linear search, etc.
 3. **Graph Algorithms**: Depth-first search (DFS), breadth-first search (BFS), Dijkstra's algorithm, etc.
 4. **Dynamic Programming**: Examples of dynamic programming problems and solutions.
