@@ -1,3 +1,5 @@
+package Concepts.Algorithms;
+
 public class LinearSearch {
     public static void main(String[] args) {
         String word = "Eat 5 star do nothing";

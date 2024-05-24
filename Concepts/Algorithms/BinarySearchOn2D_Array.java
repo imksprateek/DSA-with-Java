@@ -1,3 +1,5 @@
+package Concepts.Algorithms;
+
 import java.util.Arrays;
 
 public class BinarySearchOn2D_Array {
