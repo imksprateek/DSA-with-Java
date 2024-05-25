@@ -1,4 +1,4 @@
-package Concepts;
+package Concepts.Basic.ArrayLists;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package Concepts.Algorithms;
+package Concepts.Algorithms.Sorting.SelectionSort;
 
 import java.util.Arrays;
 

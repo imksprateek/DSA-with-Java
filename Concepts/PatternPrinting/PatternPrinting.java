@@ -1,4 +1,4 @@
-package Concepts;
+package Concepts.PatternPrinting;
 
 public class PatternPrinting {
     public static void main(String[] args) {

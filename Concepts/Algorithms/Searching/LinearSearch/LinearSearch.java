@@ -1,4 +1,4 @@
-package Concepts.Algorithms;
+package Concepts.Algorithms.Searching.LinearSearch;
 
 public class LinearSearch {
     public static void main(String[] args) {

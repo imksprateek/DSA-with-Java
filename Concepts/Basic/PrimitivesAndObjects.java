@@ -1,8 +1,8 @@
-package Concepts;
+package Concepts.Basic;
 
 import java.util.Arrays;
 
-public class sample {
+public class PrimitivesAndObjects {
     public static void main(String[] args) {
         String some_text = "Some Text";
         int[] arr = {43, 3243, 2432};

@@ -1,4 +1,4 @@
-package Concepts.Algorithms;
+package Concepts.Algorithms.Sorting.CyclicSort;
 
 public class CyclicSortAlgorithm {
     public static void main(String[] args) {

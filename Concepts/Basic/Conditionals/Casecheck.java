@@ -1,4 +1,4 @@
-package Concepts;
+package Concepts.Basic.Conditionals;
 
 import java.util.Scanner;
 

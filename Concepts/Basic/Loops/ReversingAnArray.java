@@ -1,4 +1,4 @@
-package Concepts;
+package Concepts.Basic.Loops;
 
 import java.util.Arrays;
 

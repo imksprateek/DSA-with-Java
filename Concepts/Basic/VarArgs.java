@@ -1,4 +1,4 @@
-package Concepts;
+package Concepts.Basic;
 
 import java.util.Arrays;
 

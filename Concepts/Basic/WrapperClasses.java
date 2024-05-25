@@ -1,4 +1,4 @@
-package Concepts;
+package Concepts.Basic;
 
 public class WrapperClasses {
     //Java program to convert primitive into objects

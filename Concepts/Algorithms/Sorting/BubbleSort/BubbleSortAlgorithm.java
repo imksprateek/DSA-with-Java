@@ -1,4 +1,4 @@
-package Concepts.Algorithms;
+package Concepts.Algorithms.Sorting.BubbleSort;
 
 import java.util.Arrays;
 
