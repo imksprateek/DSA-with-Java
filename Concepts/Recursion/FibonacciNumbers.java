@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class FibonacciNumbers {
     public static void main(String[] args) {
+        //This code for fibonacci numbers has a Linear Recurrence relation
         System.out.println("How many numbers: ");
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
