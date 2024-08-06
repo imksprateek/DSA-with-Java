@@ -10,8 +10,13 @@ public class FibonacciNumbers {
         int n = in.nextInt();
 
         for(int i = 0; i <= n; i++) {
-            System.out.print(fibonacci(i) + "\t");
+//            System.out.print(fibonacci(i) + "\t");
+            System.out.print(fiboFormula(i) + "\t");
         }
+    }
+
+    static int fiboFormula(int n){
+        return (int) ((Math.pow((1+Math.sqrt(5))/2, n) - Math.pow((1-Math.sqrt(5))/2, n)) / Math.sqrt(5));
     }
 
     static int fibonacci(int n){
