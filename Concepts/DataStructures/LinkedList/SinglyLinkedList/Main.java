@@ -13,6 +13,10 @@ public class Main {
         list.printList();
         System.out.println("Deleted node: " + list.delete(1));
         list.printList();
+
+        list.insertUsingRecursion(1, 99);
+        list.printList();
+
         System.out.println(((list.find(2)>=0)?"Found at index: " + (list.find(2)):"not found"));
     }
 }

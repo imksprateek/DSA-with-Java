@@ -49,6 +49,25 @@ public class CustomLinkedList {
         size+=1;
     }
 
+    //Insertion in Linked List using Recursion
+    public void insertUsingRecursion(int index, int val){
+        if(index < 0 || index > size){
+            throw new IllegalArgumentException("Index out of bounds");
+        }
+        head = insertUsingRecursion(index, val, head);
+    }
+
+    private Node insertUsingRecursion(int index, int val, Node current){
+        if(index == 0){
+            Node newNode = new Node(val);
+            newNode.next = current;
+            size++;
+            return newNode;
+        }
+        current.next = insertUsingRecursion(index-1, val, current.next);
+        return current;
+    }
+
     public int deleteFirst(){
         int val;
         if(head == null){
