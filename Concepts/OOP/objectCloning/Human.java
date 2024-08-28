@@ -1,4 +1,4 @@
-package oops.objectCloning;
+package Concepts.OOP.objectCloning;
 
 public class Human implements Cloneable {
     int age;

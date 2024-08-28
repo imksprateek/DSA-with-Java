@@ -1,4 +1,4 @@
-package oops.AbstractClasses;
+package Concepts.OOP.AbstractClasses;
 
 
 //There cannot be a final abstract class since final prevents inheritance of the abstract class, but an abstract class should be overriden.

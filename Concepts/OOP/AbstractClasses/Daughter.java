@@ -1,4 +1,4 @@
-package oops.AbstractClasses;
+package Concepts.OOP.AbstractClasses;
 
 public class Daughter extends Parent {
 

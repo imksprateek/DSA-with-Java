@@ -1,4 +1,4 @@
-package oops.AbstractClasses;
+package Concepts.OOP.AbstractClasses;
 
 public abstract class AbstractClass {
     //Any class that contains 1 or more abstract methods must also be abstract.
