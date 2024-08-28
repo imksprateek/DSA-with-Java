@@ -1,4 +1,4 @@
-package oops.Interfaces;
+package Concepts.OOP.Interfaces;
 
 public class PowerEngine implements Engine {
 

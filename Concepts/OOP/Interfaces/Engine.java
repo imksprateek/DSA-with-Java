@@ -1,4 +1,4 @@
-package oops.Interfaces;
+package Concepts.OOP.Interfaces;
 
 public interface Engine {
     //In interfaces, every variable is static and final by default

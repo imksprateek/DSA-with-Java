@@ -1,4 +1,4 @@
-package oops.generics.Comparing;
+package Concepts.OOP.generics.Comparing;
 
 import java.util.Arrays;
 import java.util.Comparator;

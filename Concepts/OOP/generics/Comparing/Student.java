@@ -1,4 +1,4 @@
-package oops.generics.Comparing;
+package Concepts.OOP.generics.Comparing;
 
 //Comparable is an interface
 public class Student implements Comparable<Student> {
