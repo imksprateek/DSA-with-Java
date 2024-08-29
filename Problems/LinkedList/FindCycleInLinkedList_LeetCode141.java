@@ -26,6 +26,7 @@ public class FindCycleInLinkedList_LeetCode141 {
         ListNode slowPointer = head;
         ListNode fastPointer = head;
 
+        //Find if a cycle exists
         while(fastPointer != null && fastPointer.next != null){
             fastPointer = fastPointer.next.next;
             slowPointer = slowPointer.next;
@@ -35,6 +36,7 @@ public class FindCycleInLinkedList_LeetCode141 {
             }
         }
 
+        //Calculate the length of cycle if found
         if(cycleFound){
             int cycleCount = 0;
             do{
