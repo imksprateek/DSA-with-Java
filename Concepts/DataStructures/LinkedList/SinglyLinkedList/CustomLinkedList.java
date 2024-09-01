@@ -142,28 +142,15 @@ public class CustomLinkedList {
         System.out.println("Size of the list: " + size);
     }
 
-    public Node get(int index){
-        if(index < 0 || index > size){
+    public Node get(int index) {
+        if (index < 0 || index > size) {
             throw new IllegalArgumentException("Index out of bounds");
         }
         Node current = head;
-        for(int i = 0; i < index; i++){
+        for (int i = 0; i < index; i++) {
             current = current.next;
         }
         return current;
     }
-
-    private class Node{
-        private int value;
-        private Node next;
-
-        public Node(int value, Node next) {
-            this.value = value;
-            this.next = next;
-        }
-
-        public Node(int value) {
-            this.value = value;
-        }
-    }
 }
+
