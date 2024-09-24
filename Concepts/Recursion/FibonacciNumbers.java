@@ -10,8 +10,8 @@ public class FibonacciNumbers {
         int n = in.nextInt();
 
         for(int i = 0; i <= n; i++) {
-//            System.out.print(fibonacci(i) + "\t");
-            System.out.print(fiboFormula(i) + "\t");
+            System.out.print(fibonacci(i) + "\t");
+//            System.out.print(fiboFormula(i) + "\t");
         }
     }
 
