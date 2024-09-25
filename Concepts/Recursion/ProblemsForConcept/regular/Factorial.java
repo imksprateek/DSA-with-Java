@@ -1,4 +1,4 @@
-package Concepts.Recursion.ProblemsForConcept;
+package Concepts.Recursion.ProblemsForConcept.regular;
 
 public class Factorial {
     public static void main(String[] args) {
