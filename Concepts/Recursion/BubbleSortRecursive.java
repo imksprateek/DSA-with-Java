@@ -1,4 +1,4 @@
-package Concepts.Recursion.ProblemsForConcept;
+package Concepts.Recursion;
 
 import java.util.Arrays;
 
