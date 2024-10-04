@@ -1,11 +1,12 @@
 # Java Data Structures and Algorithms
 
-Welcome to my Java Data Structures and Algorithms repository! Here, you'll find a collection of implementations, examples, and notes covering various data structures and algorithms implemented in Java. This repository serves as a learning resource for anyone interested in mastering fundamental concepts in computer science.
+Welcome to my Java Data Structures and Algorithms repository! Here, you'll find a collection of implementations, examples, and notes covering various data structures, algorithms, and design patterns implemented in Java. This repository serves as a learning resource for anyone interested in mastering fundamental concepts in computer science.
 
 ## Table of Contents
 
 - [Introduction](#introduction)
 - [Object-Oriented Programming Concepts](#object-oriented-programming-concepts)
+- [Creational Design Patterns](#creational-design-patterns)
 - [Data Structures](#data-structures)
 - [Algorithms](#algorithms)
 - [Contributing](#contributing)
@@ -13,7 +14,7 @@ Welcome to my Java Data Structures and Algorithms repository! Here, you'll find 
 
 ## Introduction
 
-Understanding data structures and algorithms is essential for every programmer, as they form the backbone of efficient and scalable software solutions. This repository aims to provide clear explanations and practical implementations of these concepts in Java.
+Understanding data structures, algorithms, and design patterns is essential for every programmer, as they form the backbone of efficient and scalable software solutions. This repository aims to provide clear explanations and practical implementations of these concepts in Java.
 
 ## Object-Oriented Programming Concepts
 
@@ -29,6 +30,22 @@ Understanding data structures and algorithms is essential for every programmer, 
 10. **Lambda Expressions**: Utilizing lambda expressions to represent anonymous functions, enabling functional programming paradigms and concise code syntax.
 11. **Multi-Threading**: Implementing multi-threaded applications to achieve concurrency and parallelism, improving performance and responsiveness of the software.
 
+## Creational Design Patterns
+
+1. **Singleton**: Ensures that a class has only one instance and provides a global point of access to it. This pattern is useful when a single instance of a class needs to coordinate actions across the system.
+   - Example: Database connection manager.
+   
+2. **Factory Method**: Defines an interface for creating an object, but lets subclasses alter the type of objects that will be created. This promotes flexibility in choosing object creation based on specific conditions.
+   - Example: Creating different types of shapes (Circle, Square, etc.) based on user input.
+   
+3. **Abstract Factory**: Provides an interface for creating families of related or dependent objects without specifying their concrete classes. This is useful when the system needs to be independent of how objects are created or composed.
+   - Example: GUI library that can create buttons, text fields, and labels for different operating systems (Windows, MacOS).
+   
+4. **Builder**: Separates the construction of a complex object from its representation, allowing the same construction process to create different representations. This pattern is useful for assembling complex objects step by step.
+   - Example: Constructing complex documents like reports with multiple sections and formats.
+   
+5. **Prototype**: Creates new objects by copying an existing object, known as a prototype. This is beneficial when object creation is costly, and an initial set of objects can be cloned as needed.
+   - Example: Cloning objects in a graphical application to avoid the cost of creating new objects from scratch.
 
 ## Data Structures
 
@@ -44,7 +61,7 @@ Understanding data structures and algorithms is essential for every programmer, 
 
 ## Algorithms
 
-1. **Problems.Sorting Algorithms**: Various sorting algorithms like bubble sort, selection sort, merge sort, quicksort, etc.
+1. **Sorting Algorithms**: Various sorting algorithms like bubble sort, selection sort, merge sort, quicksort, etc.
 2. **Searching Algorithms**: Binary search, linear search, etc.
 3. **Graph Algorithms**: Depth-first search (DFS), breadth-first search (BFS), Dijkstra's algorithm, etc.
 4. **Dynamic Programming**: Examples of dynamic programming problems and solutions.
@@ -56,4 +73,4 @@ Contributions to this repository are welcome! If you have any improvements, addi
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE), which means you are free to use, modify, and distribute the code for personal or commercial purposes. However, I would appreciate it if you credit this repository or provide a link back to it.
+This project is licensed under the [MIT License](LICENSE.md), which means you are free to use, modify, and distribute the code for personal or commercial purposes. However, I would appreciate it if you credit this repository or provide a link back to it.
