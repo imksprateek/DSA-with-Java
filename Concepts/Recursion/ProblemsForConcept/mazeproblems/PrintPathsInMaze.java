@@ -1,4 +1,4 @@
-package Concepts.Recursion.ProblemsForConcept.backtracking;
+package Concepts.Recursion.ProblemsForConcept.mazeproblems;
 
 import java.util.ArrayList;
 import java.util.List;

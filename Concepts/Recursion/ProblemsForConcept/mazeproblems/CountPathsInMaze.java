@@ -1,4 +1,4 @@
-package Concepts.Recursion.ProblemsForConcept.backtracking;
+package Concepts.Recursion.ProblemsForConcept.mazeproblems;
 
 public class CountPathsInMaze {
     public static void main(String[] args) {
