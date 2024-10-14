@@ -4,13 +4,13 @@ import java.util.Arrays;
 
 public class NQueensProblem {
     public static void main(String[] args) {
-        boolean[][] board = {
-                {false, false, false,false},
-                {false, false, false,false},
-                {false, false, false,false},
-                {false, false, false,false}
-        };
-        placeQueens(board, 0);
+        boolean[][] board = new boolean[4][4];
+        System.out.println("###############\t 4x4 chessboard \t###############");
+        System.out.println("Number of ways to solve: " + placeQueens(board, 0));
+        System.out.println();
+        System.out.println();
+        System.out.println("###############\t 5x5 chessboard \t###############");
+        System.out.println("Number of ways to solve: " + placeQueens(new boolean[5][5], 0));
     }
 
     //Placing queens by making the value false;
@@ -72,7 +72,6 @@ public class NQueensProblem {
             }
             System.out.println();
         }
-        System.out.println();
         System.out.println();
     }
 }
