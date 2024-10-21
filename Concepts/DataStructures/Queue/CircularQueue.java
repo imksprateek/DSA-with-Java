@@ -1,12 +1,12 @@
 package Concepts.DataStructures.Queue;
 
 public class CircularQueue {
-    private int[] data;
+    protected int[] data;
     private static final int DEFAULT_SIZE = 10;
 
-    private int front = 0;
-    private int end = 0;
-    private int size = 0;
+    protected int front = 0;
+    protected int end = 0;
+    protected int size = 0;
 
     public CircularQueue(){
         this(DEFAULT_SIZE);
