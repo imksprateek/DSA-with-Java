@@ -1,4 +1,4 @@
-package oops.generics;
+package Concepts.OOP.generics;
 
 public class ClassImplementingInterfaceWithGenerics implements InterfaceWithGeneric<Integer> {
 
