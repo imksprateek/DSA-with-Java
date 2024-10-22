@@ -5,6 +5,9 @@ import java.util.Stack;
 public class GenericStack {
     public static void main(String[] args) {
         //Note that Stack is a class but Queue is an interface. Java internally uses Array for Stack
+        //The approach in this program implements an insert efficient queue. It takes O(1) time for insertion and O(n) time for removal
+        //Similarly, remove efficient queue can be implemented by taking O(n) time for insertion and O(1) time for removal. Achieved by copying elements from first to second and second to first during insertion, so that elements are stored in reverse order
+
         Stack<Integer> stack = new Stack<>();
 
         stack.push(1);
