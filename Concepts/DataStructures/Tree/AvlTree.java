@@ -134,17 +134,17 @@ public class AvlTree {
         return c;
     }
 
-    public Node leftRotate(Node p){
-        Node c = p.right;
-        Node t = c.left;
+    public Node leftRotate(Node c){
+        Node p = c.right;
+        Node t = p.left;
 
-        c.left = p;
-        p.right = t;
+        p.left = c;
+        c.right = t;
 
         p.height = Math.max(getHeight(p.left), getHeight(p.right)) + 1;
         c.height = Math.max(getHeight(c.left), getHeight(c.right)) + 1;
 
-        return c;
+        return p;
     }
 
     public class Node{
