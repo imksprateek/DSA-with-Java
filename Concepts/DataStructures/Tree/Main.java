@@ -1,7 +1,5 @@
 package Concepts.DataStructures.Tree;
 
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
 //        BinaryTree tree = new BinaryTree();
@@ -28,5 +26,18 @@ public class Main {
         - Inorder: Used to get elements of a Binary Search Tree in increasing order.
         - Postorder: Used to delete any node from the Tree and performing any bottom=up calculation like calculating the height. Takes care of children before deleting the parent node.
          */
+
+        System.out.println("----------AVL TREE----------");
+
+        AvlTree avl = new AvlTree();
+
+        avl.insert(5);
+        avl.insert(3);
+        avl.insert(7);
+        avl.insert(2);
+        avl.insert(4);
+        avl.insert(9);
+
+        avl.display();
     }
 }
