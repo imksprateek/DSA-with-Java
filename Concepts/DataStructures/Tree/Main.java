@@ -31,13 +31,14 @@ public class Main {
 
         AvlTree avl = new AvlTree();
 
-        avl.insert(5);
-        avl.insert(3);
-        avl.insert(7);
+        avl.insert(1);
         avl.insert(2);
+        avl.insert(3);
         avl.insert(4);
-        avl.insert(9);
+        avl.insert(5);
+        avl.insert(6);
 
         avl.display();
+        //Observation- AVL Tree is not skewed when inserted in ascending order
     }
 }
