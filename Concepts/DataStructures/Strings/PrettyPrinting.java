@@ -1,4 +1,4 @@
-package Concepts.Strings;
+package Concepts.DataStructures.Strings;
 
 public class PrettyPrinting {
     public static void main(String[] args) {

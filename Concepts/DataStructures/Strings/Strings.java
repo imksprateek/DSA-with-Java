@@ -1,4 +1,4 @@
-package Concepts.Strings;
+package Concepts.DataStructures.Strings;
 
 import java.util.ArrayList;
 import java.util.Arrays;
