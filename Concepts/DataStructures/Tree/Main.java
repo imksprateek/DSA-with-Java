@@ -7,7 +7,7 @@ public class Main {
 //        tree.populate(new Scanner(System.in));
 //        tree.display();
 //        tree.prettyDisplay();
-
+        System.out.println("----------BINARY SEARCH TREE----------");
         BinarySearchTree bst = new BinarySearchTree();
         bst.populate(new int[]{5, 3, 7, 2, 4, 6, 8});
         //polulateSorted function makes sure the tree is not skewed
@@ -28,7 +28,6 @@ public class Main {
          */
 
         System.out.println("----------AVL TREE----------");
-
         AvlTree avl = new AvlTree();
 
         avl.insert(1);
@@ -40,5 +39,15 @@ public class Main {
 
         avl.display();
         //Observation- AVL Tree is not skewed when inserted in ascending order
+
+        System.out.println("----------SEGMENT TREE----------");
+        int[] arr = {3,8,7,6,-2,-8,4,9};
+        SegmentTree segmentTree = new SegmentTree(arr);
+        segmentTree.display();
+        System.out.println("------QUERIES------");
+        System.out.println(segmentTree.query(2,6));
+        System.out.println("------UPDATING VALUE------");
+        segmentTree.update(3,5);
+        segmentTree.display();
     }
 }
