@@ -1,6 +1,7 @@
 package Concepts.DataStructures.Tree;
 
-import java.util.Scanner;
+import java.lang.reflect.Array;
+import java.util.*;
 
 public class BinaryTree {
 
@@ -8,6 +9,10 @@ public class BinaryTree {
 
     public BinaryTree(){
 
+    }
+
+    public BinaryTree(Node node){
+        this.root = node;
     }
 
     //Insert elements:
@@ -111,7 +116,68 @@ public class BinaryTree {
         System.out.print(node.value + ", ");
     }
 
-    private static class Node{
+    public ArrayList<ArrayList<Integer>> bfsUsingArrayList(){
+        return bfsUsingArrayList(root, 0, new ArrayList<ArrayList<Integer>>());
+    }
+
+    public void bfsUsingQueue(){
+        bfsUsingQueue(root);
+    }
+
+    private ArrayList<ArrayList<Integer>> bfsUsingArrayList(Node node, int level, ArrayList<ArrayList<Integer>> result){
+        if(node == null){
+            return new ArrayList<ArrayList<Integer>>();
+        }
+
+        if(result.size() <= level){
+            result.add(new ArrayList<>());
+        }
+
+        result.get(level).add(node.value);
+
+        bfsUsingArrayList(node.left, level+1, result);
+        bfsUsingArrayList(node.right, level+1, result);
+        return result;
+    }
+
+    public void bfsUsingQueue(Node root) {
+        if (root == null) {
+            return;
+        }
+
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+
+        while (!queue.isEmpty()) {
+            int levelSize = queue.size();
+
+            for (int i = 0; i < levelSize; i++) {
+                Node current = queue.poll(); // Remove front node
+                System.out.print(current.value + "\t");
+
+                // Add children to the queue
+                if (current.left != null) {
+                    queue.add(current.left);
+                }
+                if (current.right != null) {
+                    queue.add(current.right);
+                }
+            }
+            System.out.println();
+        }
+
+        /*
+                queue.poll():
+                Returns: The head of the queue, or null if the queue is empty.
+                Exception: Does not throw an exception if the queue is empty.
+                queue.remove():
+                Returns: The head of the queue.
+                Exception: Throws a NoSuchElementException if the queue is empty.
+                 */
+    }
+
+
+    public static class Node{
         int value;
         Node left;
         Node right;

@@ -64,7 +64,6 @@ public class SegmentTree {
         return root.data;
     }
 
-
     private class Node{
         int data;
         int startInterval;
