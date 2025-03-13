@@ -18,6 +18,7 @@ public class FlattenBinaryTreeToLinkedList_Leetcode114 {
         System.out.println(root.value);
     }
 
+    //Less optimal solution using DFS and Queue, O(n) space
     public static void flatten(Node root) {
         Queue<Node> result = new LinkedList<Node>();
 
@@ -39,6 +40,32 @@ public class FlattenBinaryTreeToLinkedList_Leetcode114 {
         q.add(node);
         preOrder(node.left, q);
         preOrder(node.right, q);
+    }
+
+
+
+    //Most Optimal approach, using O(1) space
+    public static void flattenOptimally(Node root) {
+        if(root == null){
+            return;
+        }
+        Node current = root;
+
+        while(current != null){
+            if(current.left != null){
+                Node temp = current.left;
+
+                while(temp.right != null){
+                    temp = temp.right;
+                }
+
+                temp.right = current.right;
+                current.right = current.left;
+                current.left = null;
+            }
+            current = current.right;
+        }
+
     }
 
 
