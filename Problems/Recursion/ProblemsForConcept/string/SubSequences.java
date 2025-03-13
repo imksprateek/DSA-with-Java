@@ -22,6 +22,7 @@ public class SubSequences {
         subSeqPrint(processed+ch, unprocessed.substring(1));
         subSeqPrint(processed,unprocessed.substring(1));
     }
+    
 
     public static ArrayList<String> subSeqArr(String processed, String unprocessed){
         ArrayList<String> list = new ArrayList<String>();
