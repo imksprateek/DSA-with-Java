@@ -39,7 +39,7 @@ public class KthSmallestElementInABST_Leetcode230 {
     //Solution using Queue - Not the most optimal solution
     public int kthSmallest2(Node root, int k) {
         Queue<Integer> q = new LinkedList();
-        inOrder(root, k, q);
+        inOrder2(root, k, q);
 
         int val = 0;
 
