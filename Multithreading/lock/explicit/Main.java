@@ -1,4 +1,4 @@
-package Multithreading.lock.implicit;
+package Multithreading.lock.explicit;
 
 public class Main {
     public static void main(String[] args) {
