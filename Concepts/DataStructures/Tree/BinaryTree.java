@@ -176,6 +176,33 @@ public class BinaryTree {
                  */
     }
 
+    public void preOrderIterativeDFS(){
+        preOrderIterativeDFSHelper(root);
+    }
+
+    private void preOrderIterativeDFSHelper(Node node){
+        if(node == null){
+            return;
+        }
+
+        Stack<Node> stack = new Stack<Node>();
+        stack.push(node);
+
+        System.out.println("Preorder traversal:");
+        while(!stack.isEmpty()){
+            Node removed = stack.pop();
+            System.out.print(removed.value + ", ");
+
+            if(node.right!=null){
+                stack.push(removed.right);
+            }
+            if(node.left!=null){
+                stack.push(removed.left);
+            }
+        }
+        System.out.println();
+    }
+
 
     public static class Node{
         public int value;
