@@ -1,5 +1,6 @@
 package Concepts.DataStructures.Heaps;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Heap<T extends Comparable<T>> {
@@ -37,7 +38,82 @@ public class Heap<T extends Comparable<T>> {
             return;
         }
 
-        int p = parent(index);
-        
+        int parent = parent(index);
+        if(list.get(index).compareTo(list.get(parent)) < 0) {
+            swap(parent, index);
+            upHeap(parent);
+        }
     }
+
+    public T remove() throws Exception{
+        if(list.isEmpty()){
+            throw new Exception("Can't remove from an empty heap!");
+        }
+
+        T temp = list.get(0);
+
+        T last = list.remove(list.size()-1);
+        if(!list.isEmpty()){
+            list.set(0, last);
+            downHeap(0);
+        }
+        return temp;
+    }
+
+    public void downHeap(int index){
+        int min = index;
+        int left = left(index);
+        int right = right(index);
+
+        if(left < list.size() && list.get(min).compareTo(list.get(left)) > 0){
+            min = left;
+        }
+        if(right < list.size() && list.get(min).compareTo(list.get(right)) > 0){
+            min = right;
+        }
+
+        if(min != index){
+            swap(min, index);
+            downHeap(min);
+        }
+    }
+
+    public T peek() {
+        if (list.isEmpty()) {
+            throw new IllegalStateException("Heap is empty!");
+        }
+        return list.get(0);
+    }
+
+
+    public void printHeap() {
+        int size = list.size();
+        int levels = (int)(Math.log(size) / Math.log(2)) + 1;
+
+        int maxWidth = (int) Math.pow(2, levels) * 2;
+        int index = 0;
+
+        for (int i = 0; i < levels; i++) {
+            int levelCount = (int)Math.pow(2, i);
+            int spacing = maxWidth / (levelCount + 1);
+
+            // Print leading spaces
+            for (int j = 0; j < levelCount && index < size; j++, index++) {
+                System.out.print(" ".repeat(spacing - 1));
+                System.out.print(list.get(index));
+            }
+            System.out.println(); // Move to next level
+        }
+    }
+
+    public ArrayList<T> heapSort() throws Exception{
+        ArrayList<T> result = new ArrayList<>();
+
+        while(!list.isEmpty()){
+            result.add(this.remove());
+        }
+
+        return result;
+    }
+
 }
