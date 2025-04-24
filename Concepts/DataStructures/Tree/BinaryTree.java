@@ -203,6 +203,34 @@ public class BinaryTree {
         System.out.println();
     }
 
+    public List<Integer> inorderIterativeDFS(){
+        return inorderIterativeDFSHelper(root);
+    }
+
+    private List<Integer> inorderIterativeDFSHelper(Node root){
+        if (root == null) {
+            return new ArrayList<Integer>();
+        }
+
+        Stack<Node> stack = new Stack();
+        List<Integer> result = new ArrayList<>();
+
+        Node curr = root;
+
+        while (curr != null || !stack.isEmpty()) {
+            while (curr != null) {
+                stack.push(curr);
+                curr = curr.left;
+            }
+
+            curr = stack.pop();
+            result.add(curr.value);
+
+            curr = curr.right;
+        }
+        return result;
+    }
+
 
     public static class Node{
         public int value;
